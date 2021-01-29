@@ -51,20 +51,26 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="firstInput" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <p> <span class="plusMinus" id="firstclassAdd" onclick="addTicket('firstInput')">+</span></p>
+                </div>
+                <div class="plus-minus-btn">
+                     <p><span class="plusMinus" id="firstClassRemove" onclick="RemoveTicket('firstInput')">-</span></p> 
                 </div>
             </div>
             
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="secondInput" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <p> <span  class="plusMinus" id="EconomicAdd" onclick="addTicket('secondInput')" >+</span></p>
+                </div>
+                <div class="plus-minus-btn">
+                     <p><span  class="plusMinus" id="EconomicRemove" onclick="RemoveTicket('secondInput')">-</span></p> 
                 </div>
             </div>
             <div class="calculations">
@@ -73,7 +79,7 @@
                         <p>Subtotal</p>
                     </div>
                     <div class="right">
-                        <p>$500</p>
+                        <p>$<span id="sub_total">0</span></p>
                     </div>
                 </div>
 
@@ -104,7 +110,7 @@
         </div>
     </section>
 
-    <!--Thank You-->
+    <script src="./script.js"></script>
 </body>
 
 </html>

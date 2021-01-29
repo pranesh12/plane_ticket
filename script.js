@@ -49,10 +49,11 @@ function Calculate() {
     //sub and totals
     let subTotal = document.getElementById("sub_total");
     let total = document.getElementById("total");
-
+    let vat = document.getElementById("vat");
     //calculating 
     subTotal.innerText = currentFirstClassCost + currentEconomicClassCost;
     let currentVat = Math.round((parseInt(subTotal.innerText) * 0.1));
+    vat.innerText = currentVat;
     let currentTotal = parseInt(subTotal.innerText) + currentVat;
     total.innerText = currentTotal;
 

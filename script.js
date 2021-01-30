@@ -59,7 +59,8 @@ function Calculate() {
 }
 
 
-document.getElementById("bookNow").addEventListener("click",function(){
+document.getElementById("bookNow").addEventListener("click", function () {
+    //This code will work if you press Book Now button
     let body = document.querySelector("body");
     body.style.background = "#ddd";
     let mainDisplay = document.getElementById("main");
@@ -67,7 +68,7 @@ document.getElementById("bookNow").addEventListener("click",function(){
     let showInfo = document.getElementById("shoInfo");
     showInfo.style.display = "block";
 
-
+    //Total Infos
     let first_class_price = document.getElementById("first_class_price").innerText;
     let economic_class_price = document.getElementById("economic_class_price").innerText;
     let sub_total = document.getElementById("sub_total").innerText;
@@ -84,9 +85,8 @@ document.getElementById("bookNow").addEventListener("click",function(){
 
     //printing
     let printBtn = document.getElementById('printBtn');
-    printBtn.addEventListener("click",function(){
+    printBtn.addEventListener("click", function () {
         print(printBtn);
-        
     })
 
 })

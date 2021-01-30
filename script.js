@@ -56,7 +56,37 @@ function Calculate() {
     vat.innerText = currentVat;
     let currentTotal = parseInt(subTotal.innerText) + currentVat;
     total.innerText = currentTotal;
-
-
 }
 
+
+document.getElementById("bookNow").addEventListener("click",function(){
+    let body = document.querySelector("body");
+    body.style.background = "#ddd";
+    let mainDisplay = document.getElementById("main");
+    mainDisplay.style.display = "none";
+    let showInfo = document.getElementById("shoInfo");
+    showInfo.style.display = "block";
+
+
+    let first_class_price = document.getElementById("first_class_price").innerText;
+    let economic_class_price = document.getElementById("economic_class_price").innerText;
+    let sub_total = document.getElementById("sub_total").innerText;
+    let vat = document.getElementById("vat").innerText;
+    let total = document.getElementById("total").innerText;
+
+
+    //Display price
+    let firstClassPrice = document.getElementById("firstClassPrice").innerText = first_class_price;
+    let economicClassPrice = document.getElementById("economicClassPrice").innerText = economic_class_price;
+    let display_subTotal = document.getElementById("display_subTotal").innerText = sub_total;
+    let displayVat = document.getElementById("displayVat").innerText = vat;
+    let displayTotal = document.getElementById("displayTotal").innerText = total;
+
+    //printing
+    let printBtn = document.getElementById('printBtn');
+    printBtn.addEventListener("click",function(){
+        print(printBtn);
+        
+    })
+
+})

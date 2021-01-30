@@ -15,101 +15,121 @@
 
 <body>
     <!--Header and Menu Section-->
-    <header class="container">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a class="active" href="#">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
+    <section id="main">
+        <header class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a class="active" href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <main  class="main-content container">
+            <div class="booking-form">
+                <h3>Booking Flights</h3>
+                <div class="input-group">
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                </div>
+                <div class="input-group">
+                    <label for="">Flying To</label>
+                    <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                </div>
+                <div class="inputs">
+                    <div class="input-group">
+                        <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
+                    </div>
+                </div>
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">First Class ($<span id="first_class_price">0</span>)</label>
+                        <input id="firstInput" class="inp-style inp-width" type="number" value="0" name="">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <p> <span class="plusMinus" id="firstclassAdd" onclick="addTicket('firstInput','first_class_price')">+</span></p>
+                    </div>
+                    <div class="plus-minus-btn">
+                         <p><span class="plusMinus" id="firstClassRemove" onclick="RemoveTicket('firstInput','first_class_price')">-</span></p> 
+                    </div>
+                </div>
+                
+                <div class="input-group f-class">
+                    <div>
+                        <label for="">Economy ($<span id="economic_class_price">0</span>)</label>
+                        <input id="secondInput" class="inp-style inp-width" type="number" value="0" name="">
+                    </div>
+                    <div class="plus-minus-btn">
+                        <p> <span  class="plusMinus" id="EconomicAdd" onclick="addTicket('secondInput','economic_class_price')" >+</span></p>
+                    </div>
+                    <div class="plus-minus-btn">
+                         <p><span  class="plusMinus" id="EconomicRemove" onclick="RemoveTicket('secondInput','economic_class_price')">-</span></p> 
+                    </div>
+                </div>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>Subtotal</p>
+                        </div>
+                        <div class="right">
+                            <p>$<span id="sub_total">0</span></p>
+                        </div>
+                    </div>
+    
+                    <div class="amount">
+                        <div class="left">
+                            <p>Charge 10% VAT</p>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id ="vat">0</span></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="amount">
+                        <div class="left">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="right">
+                            <p>$ <span id="total">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <button  id="bookNow" class="btn-style">Book Now</button>
+            </div>
+    
+            <div class="booking-content">
+                <h1>discover <br> around the world</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            </div>
+        </section>
+
+    </section>
+    
 
     <!--Booking Section-->
-    <main class="main-content container">
-        <div class="booking-form">
-            <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
-                <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
-                </div>
-                <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
-                </div>
-            </div>
-            <div class="input-group f-class">
-                <div>
-                    <label for="">First Class ($<span id="first_class_price">0</span>)(Per Cost $150)</label>
-                    <input id="firstInput" class="inp-style inp-width" type="number" value="0" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p> <span class="plusMinus" id="firstclassAdd" onclick="addTicket('firstInput','first_class_price')">+</span></p>
-                </div>
-                <div class="plus-minus-btn">
-                     <p><span class="plusMinus" id="firstClassRemove" onclick="RemoveTicket('firstInput','first_class_price')">-</span></p> 
-                </div>
-            </div>
-            
-            <div class="input-group f-class">
-                <div>
-                    <label for="">Economy ($<span id="economic_class_price">0</span>)(Per Cost $100)</label>
-                    <input id="secondInput" class="inp-style inp-width" type="number" value="0" name="">
-                </div>
-                <div class="plus-minus-btn">
-                    <p> <span  class="plusMinus" id="EconomicAdd" onclick="addTicket('secondInput','economic_class_price')" >+</span></p>
-                </div>
-                <div class="plus-minus-btn">
-                     <p><span  class="plusMinus" id="EconomicRemove" onclick="RemoveTicket('secondInput','economic_class_price')">-</span></p> 
-                </div>
-            </div>
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p>$<span id="sub_total">0</span></p>
-                    </div>
-                </div>
+   
 
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id ="vat">0</span></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$ <span id="total">0</span></p>
-                    </div>
-                </div>
-            </div>
-            <button id="bookNow" class="btn-style">Book Now</button>
-        </div>
-
-        <div class="booking-content">
-            <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
-        </div>
-    </section>
-
+    <div id="shoInfo">
+        <h1>Thank You Sir For Using our AirLine</h1>
+        <h2>Your Ticket Info</h2>
+        
+        <p>First Class Ticket price is : $<span id="firstClassPrice">0</span></p>
+        <p>Economic Class Ticket price is : $<span id="economicClassPrice">0</span></p>
+        <p>Subtotal : $<span id="display_subTotal">0</span></p>
+        <p>Vat: $ <span id="displayVat">0</span></p>
+        <p>...........</p>
+        <h3>Total: $ <span id="displayTotal">0</span></h3>
+        <button  id="printBtn">Print</button>
+    </div>
     <script src="./script.js"></script>
 </body>
 

@@ -127,3 +127,24 @@ nav ul li a:hover, a.active{
 cursor: pointer;
 
 }
+a{
+    text-decoration: none;
+    color: white;
+}
+#shoInfo{
+    display: none;
+    text-align: center;
+    line-height: 2rem;
+    margin: 3px;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding-top:15px;
+}
+#printBtn{
+    width: 100px;
+    border: none;
+    padding: 7px 10px;
+    background: rgb(236, 91, 91);
+    color: white;
+    border-radius: 5px;
+}
